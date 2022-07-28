@@ -1,0 +1,46 @@
+THE CALCULATOR DOES NOT SEEM TO SHOW THE VIEW DURING THE DEVELOPING PROCESS
+
+*** This is the problem and the solution file ***
+_______________________________________________________________________________________________________________________
+
+PATTERN : Each Calculator start up with the creation of buttons which use for each button layout. Each component class
+        contains the specific component materials such as the STRING (text on the button), getters and setters associating
+        with the controller class.
+
+            The controller class consists of many kind of methods, most of which will is the methods for getting collecting
+        the component and form them into one collection as a HashMap.
+
+        !-- Each component class can be derived from Standard Component for better performance and reducing the
+            redundancy
+        --!
+_______________________________________________________________________________________________________________________
+
+
+FIXME : The problem has occurred when using "static" buttons that made inside the final button class.
+    The idea behind the creation of the class is the make lists of usable buttons for every accessory class to call and use
+    However, after using the button with more calculator type involved, the button has duplicated but has the same references
+    which cause the button to perform action multiple time per click.  //-> FIXED!
+
+
+FIXME : The problem of the unpleasant UI on the IO view has occurred while trying to resize the text to smaller or
+    larger size to fit the label size. The issues appear as the string has looping resize back and up when the gap between
+    the smaller font size and the larger one trigger each other.
+
+
+FIXME : The bug has been found while trying to use the calculation process.
+    1. The parenthesis between two operators to prevent confusion. //-> DONE
+    2. Multiple calculation of the standard IO      // -> DONE BY REDO
+
+
+_______________________________________________________________________________________________________________________
+
+TODO :
+    /IDEA 1 : Don't use the static button and let the layout class create new buttons
+    each time a new window of a calculator type appear       //-> WORKED
+
+TODO:
+    /IDEA 1 (Parenthesis) : Using Multiple Cases to Match the string (Match the char of '-' -1 is not == 'E') and
+    (Match the char of '-' + 1 is not ' ') //-> WORKED
+
+
+TODO: BUILD THE SCIENTIFIC CALCULATOR
